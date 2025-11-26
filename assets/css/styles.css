@@ -8,29 +8,52 @@
    Variables
    -------------------- */
 :root {
-    --main: #00ffddff;
-    --main-off-grad: #00ccaaff;
-    --secondary: #d41111;
-    --tertiary-dark: #012F34;
-    --tertiary-dark-contrast: #EAF9F8;
-    --tertiary-light: #E8FBFA;
-    --tertiary-light-contrast: #072728;
+    /* Vibrant cyan palette */
+    --main: #00e5cc;
+    --main-off-grad: #00b8a9;
+    --cyan-light: #00ffea;
+    --cyan-dark: #008f85;
+    
+    /* Bold red accent */
+    --secondary: #ff3b3b;
+    --red-dark: #d81e1e;
+    
+    /* Pure whites and blacks */
+    --white: #ffffff;
+    --white-soft: #f8fffe;
+    --black: #0a0f0e;
+    --black-soft: #1a2120;
+    
+    /* Neutral grays for depth */
+    --gray-light: #e8f4f3;
+    --gray-mid: #b8cfcc;
+    --gray-dark: #2d3534;
 
 }
 
+/* global */
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    /* font-size: 16px; */
+}
 
 /* --------------------
    Base
    -------------------- */
 body {
-    background-color: var(--tertiary-light);
+    background: linear-gradient(135deg, var(--white-soft) 0%, var(--gray-light) 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 
 /* --------------------
    Layout / Card
    -------------------- */
-.body {
+.main {
     /* gradient background */
     background-color: var(--main);
     background-image: linear-gradient(to bottom right, var(--main), var(--main-off-grad));
@@ -38,7 +61,7 @@ body {
     background-size: cover;
     /* positioning */
     width: 60vw;
-    height: 60vh;
+    height: 40vh;
     /* place at center of screen */
     margin: auto;
     position: absolute;
@@ -48,8 +71,15 @@ body {
     right: 0;
 
     /* appearance */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 255, 221, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(10, 15, 14, 0.18), 
+                0 2px 8px rgba(0, 229, 204, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* Content */
+    text-align: center;
+    padding: 2rem 2.5rem;
 }
 
 
@@ -58,13 +88,44 @@ body {
    -------------------- */
 h1 {
     color: var(--secondary);
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0.5rem 0 0.75rem 0;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    text-shadow: 0 2px 6px rgba(255, 59, 59, 0.15);
+}
+
+p{
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0.5rem auto;
+    max-width: 65ch;
+    text-shadow: 0 1px 3px rgba(10, 15, 14, 0.1);
+}
+.footer {
+    color: var(--black-soft);
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    letter-spacing: 0.3px;
+    opacity: 0.85;
 }
 
 .panda {
     width: 300px;
     height: auto;
-    padding-left: 200px;
     margin: -180px;
+}
+
+.muted{
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.88;
 }
 
 /* End of file — organized without functional changes */

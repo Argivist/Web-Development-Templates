@@ -14,10 +14,16 @@
     <div class="body">
         <div class="main">
             <img src="panda.png" class="panda" />
-            <h1>Hello</h1>
-            <p>Welcome to the AMS. This platform is still under development.</p>
+            <?php for ($i = 0; $i < 4; $i++) {
+                echo "<br />";
+            }; ?>
+            <h1>Welcome to AMS — Asset Management Simplified</h1>
+            <p>AMS helps you track, organize, and manage assets quickly and reliably. We're actively building smarter
+                dashboards, real-time tracking, and actionable reports to streamline your workflow.</p>
+            <p class="muted">This platform is in active development — try the features and share feedback to help
+                improve it.</p>
         </div>
-        <p> Powered by EdrionTech</p>
+        <p class="footer"> Powered by EdrionTech</p>
     </div>
 
 
