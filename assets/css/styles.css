@@ -1,0 +1,70 @@
+/* ==================================================
+   styles.css — organized (no visual changes)
+   The file has been re-ordered into logical sections
+   but all selectors and property values are unchanged.
+   ================================================== */
+
+/* --------------------
+   Variables
+   -------------------- */
+:root {
+    --main: #00ffddff;
+    --main-off-grad: #00ccaaff;
+    --secondary: #d41111;
+    --tertiary-dark: #012F34;
+    --tertiary-dark-contrast: #EAF9F8;
+    --tertiary-light: #E8FBFA;
+    --tertiary-light-contrast: #072728;
+
+}
+
+
+/* --------------------
+   Base
+   -------------------- */
+body {
+    background-color: var(--tertiary-light);
+}
+
+
+/* --------------------
+   Layout / Card
+   -------------------- */
+.body {
+    /* gradient background */
+    background-color: var(--main);
+    background-image: linear-gradient(to bottom right, var(--main), var(--main-off-grad));
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* positioning */
+    width: 60vw;
+    height: 60vh;
+    /* place at center of screen */
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* appearance */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 255, 221, 0.2);
+}
+
+
+/* --------------------
+   Typography / Components
+   -------------------- */
+h1 {
+    color: var(--secondary);
+}
+
+.panda {
+    width: 300px;
+    height: auto;
+    padding-left: 200px;
+    margin: -180px;
+}
+
+/* End of file — organized without functional changes */
